@@ -1,0 +1,20 @@
+D:\DUT-.Net\Security Panel\Security Panel\bin\Debug\Security Panel.exe.config
+D:\DUT-.Net\Security Panel\Security Panel\bin\Debug\Security Panel.exe
+D:\DUT-.Net\Security Panel\Security Panel\bin\Debug\Security Panel.pdb
+D:\DUT-.Net\Security Panel\Security Panel\obj\Debug\Security Panel.csproj.AssemblyReference.cache
+D:\DUT-.Net\Security Panel\Security Panel\obj\Debug\Security_Panel.Form1.resources
+D:\DUT-.Net\Security Panel\Security Panel\obj\Debug\Security_Panel.Properties.Resources.resources
+D:\DUT-.Net\Security Panel\Security Panel\obj\Debug\Security Panel.csproj.GenerateResource.cache
+D:\DUT-.Net\Security Panel\Security Panel\obj\Debug\Security Panel.csproj.CoreCompileInputs.cache
+D:\DUT-.Net\Security Panel\Security Panel\obj\Debug\Security Panel.exe
+D:\DUT-.Net\Security Panel\Security Panel\obj\Debug\Security Panel.pdb
+D:\exercise_basic_.net\Security Panel\Security Panel\bin\Debug\Security Panel.exe.config
+D:\exercise_basic_.net\Security Panel\Security Panel\bin\Debug\Security Panel.exe
+D:\exercise_basic_.net\Security Panel\Security Panel\bin\Debug\Security Panel.pdb
+D:\exercise_basic_.net\Security Panel\Security Panel\obj\Debug\Security Panel.csproj.AssemblyReference.cache
+D:\exercise_basic_.net\Security Panel\Security Panel\obj\Debug\Security_Panel.Form1.resources
+D:\exercise_basic_.net\Security Panel\Security Panel\obj\Debug\Security_Panel.Properties.Resources.resources
+D:\exercise_basic_.net\Security Panel\Security Panel\obj\Debug\Security Panel.csproj.GenerateResource.cache
+D:\exercise_basic_.net\Security Panel\Security Panel\obj\Debug\Security Panel.csproj.CoreCompileInputs.cache
+D:\exercise_basic_.net\Security Panel\Security Panel\obj\Debug\Security Panel.exe
+D:\exercise_basic_.net\Security Panel\Security Panel\obj\Debug\Security Panel.pdb
