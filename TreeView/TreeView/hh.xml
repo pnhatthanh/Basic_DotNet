@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<bookstore>
+  <book>
+    <title>Harry Potter</title>
+    <author>J.K. Rowling<k>jasjjs</k></author>
+    <price>29.99</price>
+    <kk>hih</kk>
+  </book>
+  <book>author<year>1976</year><price>15.00</price></book>
+  <kkk>hihi</kkk>
+  <hello>hi</hello>hiuhiu</bookstore>
