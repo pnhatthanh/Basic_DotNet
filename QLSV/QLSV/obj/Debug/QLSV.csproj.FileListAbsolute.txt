@@ -1,0 +1,11 @@
+D:\DUT-.Net\QLSV\QLSV\obj\Debug\QLSV.csproj.AssemblyReference.cache
+D:\DUT-.Net\QLSV\QLSV\obj\Debug\QLSV.Form1.resources
+D:\DUT-.Net\QLSV\QLSV\obj\Debug\QLSV.Form2.resources
+D:\DUT-.Net\QLSV\QLSV\obj\Debug\QLSV.Properties.Resources.resources
+D:\DUT-.Net\QLSV\QLSV\obj\Debug\QLSV.csproj.GenerateResource.cache
+D:\DUT-.Net\QLSV\QLSV\obj\Debug\QLSV.csproj.CoreCompileInputs.cache
+D:\DUT-.Net\QLSV\QLSV\bin\Debug\QLSV.exe.config
+D:\DUT-.Net\QLSV\QLSV\bin\Debug\QLSV.exe
+D:\DUT-.Net\QLSV\QLSV\bin\Debug\QLSV.pdb
+D:\DUT-.Net\QLSV\QLSV\obj\Debug\QLSV.exe
+D:\DUT-.Net\QLSV\QLSV\obj\Debug\QLSV.pdb
