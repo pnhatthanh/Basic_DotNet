@@ -63,7 +63,7 @@
             // searcch_box
             // 
             this.searcch_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searcch_box.Location = new System.Drawing.Point(499, 42);
+            this.searcch_box.Location = new System.Drawing.Point(508, 49);
             this.searcch_box.Name = "searcch_box";
             this.searcch_box.Size = new System.Drawing.Size(147, 24);
             this.searcch_box.TabIndex = 2;
@@ -71,7 +71,7 @@
             // search_button
             // 
             this.search_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search_button.Location = new System.Drawing.Point(667, 34);
+            this.search_button.Location = new System.Drawing.Point(700, 42);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(99, 38);
             this.search_button.TabIndex = 3;
@@ -86,7 +86,7 @@
             this.data_view.Name = "data_view";
             this.data_view.RowHeadersWidth = 51;
             this.data_view.RowTemplate.Height = 24;
-            this.data_view.Size = new System.Drawing.Size(724, 253);
+            this.data_view.Size = new System.Drawing.Size(757, 253);
             this.data_view.TabIndex = 4;
             // 
             // button2
@@ -103,7 +103,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(201, 386);
+            this.button3.Location = new System.Drawing.Point(227, 385);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 33);
             this.button3.TabIndex = 6;
@@ -114,7 +114,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(340, 388);
+            this.button4.Location = new System.Drawing.Point(372, 387);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 32);
             this.button4.TabIndex = 7;
@@ -125,7 +125,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(474, 389);
+            this.button5.Location = new System.Drawing.Point(522, 388);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 30);
             this.button5.TabIndex = 8;
@@ -139,10 +139,11 @@
             this.cbbItem.FormattingEnabled = true;
             this.cbbItem.Items.AddRange(new object[] {
             "MSSV",
-            "FullName",
+            "NameSV",
             "NS",
-            "DTB"});
-            this.cbbItem.Location = new System.Drawing.Point(617, 392);
+            "DTB",
+            "ID_Lop"});
+            this.cbbItem.Location = new System.Drawing.Point(678, 392);
             this.cbbItem.Name = "cbbItem";
             this.cbbItem.Size = new System.Drawing.Size(121, 26);
             this.cbbItem.TabIndex = 9;
@@ -151,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(849, 450);
             this.Controls.Add(this.cbbItem);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

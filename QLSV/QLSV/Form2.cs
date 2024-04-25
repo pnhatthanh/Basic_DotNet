@@ -26,12 +26,32 @@ namespace QLSV
             setLSH();
             dataform2();
         }
+        public void setLSH()
+        {
+            string query = "Select * from LSH";
+            List<LopSH> li = new List<LopSH>();
+            foreach (DataRow dr in DbAdapter.Instance.GetRecord(query).Rows)
+            {
+                li.Add(new LopSH
+                {
+                    name = dr["NameLop"].ToString(),
+                    id = Convert.ToInt32(dr["ID_Lop"].ToString())
+                });
+            }
+            li.Add(new LopSH
+            {
+                id = 0,
+                name = "All"
+            });
+            cbbbLsh.Items.AddRange(li.ToArray());
+        }
         private void dataform2()
         {
             mssv.Text = _sv.MSSV;
             mssv.Enabled = false;
             name.Text = _sv.FullName;
-            cbbLsh.Text = _sv.LopSH;
+            cbbbLsh.SelectedItem=DbAdapter.Instance.GetLopSHByID(_sv.ID_LopSH);
+            cbbbLsh.Text= DbAdapter.Instance.GetLopSHByID(_sv.ID_LopSH).name;
             NS.Text = _sv.NS.ToString();
             dtb.Text = _sv.DTB.ToString();
             if (_sv.Gender)
@@ -43,16 +63,6 @@ namespace QLSV
                 Femal.Checked = true;
             }
         }
-        private void setLSH()
-        {
-            List<string> lsh = new List<string>();
-            foreach (SV i in CSDL.Instance.getAllSV())
-            {
-                lsh.Add(i.LopSH);
-            }
-            cbbLsh.Items.AddRange(lsh.Distinct().ToArray());
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (_sv == null)
@@ -70,8 +80,17 @@ namespace QLSV
                     _svnew.Gender = true;
                 }
                 _svnew.DTB = double.Parse(dtb.Text);
-                _svnew.LopSH = cbbLsh.SelectedItem.ToString();
-                CSDL.Instance.addSV(_svnew);
+                _svnew.ID_LopSH = ((LopSH)cbbbLsh.SelectedItem).id;
+                try
+                {
+                    string query = "INSERT INTO SV (MSSV, NameSV, DTB, Gender, ID_Lop, NS) " +
+                    "VALUES (@MSSV, @NameSV, @DTB, @Gender, @ID_Lop, @NS)";
+                    DbAdapter.Instance.saveSV(query, _svnew);
+                }catch(Exception ex) {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return;
+                }
+                
             }
             else
             {
@@ -86,12 +105,13 @@ namespace QLSV
                     _sv.Gender = true;
                 }
                 _sv.DTB = double.Parse(dtb.Text);
-                _sv.LopSH = cbbLsh.SelectedItem.ToString();
-                CSDL.Instance.editSV(_sv);
+                _sv.ID_LopSH = ((LopSH)cbbbLsh.SelectedItem).id;
+                string query = "UPDATE SV SET NameSV = @NameSV, DTB = @DTB, Gender = @Gender, ID_Lop = @ID_Lop, NS = @NS WHERE MSSV = @MSSV";
+                DbAdapter.Instance.saveSV(query, _sv);
             }
             this.Close();
-        }
 
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();

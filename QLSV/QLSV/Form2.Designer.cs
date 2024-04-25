@@ -34,7 +34,7 @@
             this.mssv = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
             this.dtb = new System.Windows.Forms.TextBox();
-            this.cbbLsh = new System.Windows.Forms.ComboBox();
+            this.cbbbLsh = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.NS = new System.Windows.Forms.DateTimePicker();
@@ -100,14 +100,14 @@
             this.dtb.Size = new System.Drawing.Size(180, 24);
             this.dtb.TabIndex = 5;
             // 
-            // cbbLsh
+            // cbbbLsh
             // 
-            this.cbbLsh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbLsh.FormattingEnabled = true;
-            this.cbbLsh.Location = new System.Drawing.Point(182, 193);
-            this.cbbLsh.Name = "cbbLsh";
-            this.cbbLsh.Size = new System.Drawing.Size(180, 26);
-            this.cbbLsh.TabIndex = 6;
+            this.cbbbLsh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbbLsh.FormattingEnabled = true;
+            this.cbbbLsh.Location = new System.Drawing.Point(182, 193);
+            this.cbbbLsh.Name = "cbbbLsh";
+            this.cbbbLsh.Size = new System.Drawing.Size(180, 26);
+            this.cbbbLsh.TabIndex = 6;
             // 
             // label4
             // 
@@ -123,7 +123,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(467, 59);
+            this.label5.Location = new System.Drawing.Point(403, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 20);
             this.label5.TabIndex = 8;
@@ -132,9 +132,9 @@
             // NS
             // 
             this.NS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NS.Location = new System.Drawing.Point(542, 54);
+            this.NS.Location = new System.Drawing.Point(441, 63);
             this.NS.Name = "NS";
-            this.NS.Size = new System.Drawing.Size(200, 24);
+            this.NS.Size = new System.Drawing.Size(268, 24);
             this.NS.TabIndex = 9;
             // 
             // groupBox1
@@ -142,7 +142,7 @@
             this.groupBox1.Controls.Add(this.Femal);
             this.groupBox1.Controls.Add(this.Male);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(470, 139);
+            this.groupBox1.Location = new System.Drawing.Point(441, 148);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(243, 96);
             this.groupBox1.TabIndex = 10;
@@ -206,7 +206,7 @@
             this.Controls.Add(this.NS);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbbLsh);
+            this.Controls.Add(this.cbbbLsh);
             this.Controls.Add(this.dtb);
             this.Controls.Add(this.name);
             this.Controls.Add(this.mssv);
@@ -230,7 +230,7 @@
         private System.Windows.Forms.TextBox mssv;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.TextBox dtb;
-        private System.Windows.Forms.ComboBox cbbLsh;
+        private System.Windows.Forms.ComboBox cbbbLsh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker NS;

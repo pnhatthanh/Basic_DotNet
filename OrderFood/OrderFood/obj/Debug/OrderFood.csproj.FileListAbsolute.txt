@@ -1,0 +1,10 @@
+D:\DUT-.Net\OrderFood\OrderFood\bin\Debug\OrderFood.exe.config
+D:\DUT-.Net\OrderFood\OrderFood\bin\Debug\OrderFood.exe
+D:\DUT-.Net\OrderFood\OrderFood\bin\Debug\OrderFood.pdb
+D:\DUT-.Net\OrderFood\OrderFood\obj\Debug\OrderFood.csproj.AssemblyReference.cache
+D:\DUT-.Net\OrderFood\OrderFood\obj\Debug\OrderFood.Form1.resources
+D:\DUT-.Net\OrderFood\OrderFood\obj\Debug\OrderFood.Properties.Resources.resources
+D:\DUT-.Net\OrderFood\OrderFood\obj\Debug\OrderFood.csproj.GenerateResource.cache
+D:\DUT-.Net\OrderFood\OrderFood\obj\Debug\OrderFood.csproj.CoreCompileInputs.cache
+D:\DUT-.Net\OrderFood\OrderFood\obj\Debug\OrderFood.exe
+D:\DUT-.Net\OrderFood\OrderFood\obj\Debug\OrderFood.pdb
