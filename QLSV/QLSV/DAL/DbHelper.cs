@@ -6,27 +6,28 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLSV.DTO;
 
 namespace QLSV
 {
-    internal class DbAdapter
+    public class DbHelper
     {
         private SqlConnection _con;
-        private static DbAdapter _instance;
-        public static DbAdapter Instance
+        private static DbHelper _instance;
+        public static DbHelper Instance
         {
             get
             {
                 if (_instance == null)
                 {
                     string s = "Data Source=Admin;Initial Catalog=QLSV;Integrated Security=True;";
-                    _instance = new DbAdapter(s);
+                    _instance = new DbHelper(s);
                 }
                 return _instance;
             }
             private set { }
         }
-        private DbAdapter(string s)
+        private DbHelper(string s)
         {
             _con = new SqlConnection(s);
         }
@@ -42,6 +43,14 @@ namespace QLSV
         public void ExecuteDb(string query)
         {
             SqlCommand cmd = new SqlCommand(query, _con);
+            _con.Open();
+            cmd.ExecuteNonQuery();
+            _con.Close();
+        }
+        public void deleteSV(string query, string mssv)
+        {
+            SqlCommand cmd = new SqlCommand(query, _con);
+            cmd.Parameters.AddWithValue("@mssv", mssv);
             _con.Open();
             cmd.ExecuteNonQuery();
             _con.Close();
@@ -105,16 +114,5 @@ namespace QLSV
             _con.Close();
             return lop;
         }
-        public DataTable SortByCriteria(string query,string criteria)
-        {
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(query, _con);
-            da.SelectCommand.Parameters.AddWithValue("@Criteria", criteria);
-            _con.Open();
-            da.Fill(dt);
-            _con.Close();
-            return dt;
-        }
-
     }
 }

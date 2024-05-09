@@ -1,4 +1,4 @@
-﻿namespace QLSV
+﻿namespace QLSV.Views
 {
     partial class Form1
     {
@@ -142,7 +142,7 @@
             "NameSV",
             "NS",
             "DTB",
-            "ID_Lop"});
+            "Gender"});
             this.cbbItem.Location = new System.Drawing.Point(678, 392);
             this.cbbItem.Name = "cbbItem";
             this.cbbItem.Size = new System.Drawing.Size(121, 26);

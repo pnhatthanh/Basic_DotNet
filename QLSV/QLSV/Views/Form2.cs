@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLSV.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace QLSV
 {
     public partial class Form2 : Form
     {
+        private QLSV ql=new QLSV();
         private SV _sv=null;
         public Form2()
         {
@@ -28,30 +30,16 @@ namespace QLSV
         }
         public void setLSH()
         {
-            string query = "Select * from LSH";
-            List<LopSH> li = new List<LopSH>();
-            foreach (DataRow dr in DbAdapter.Instance.GetRecord(query).Rows)
-            {
-                li.Add(new LopSH
-                {
-                    name = dr["NameLop"].ToString(),
-                    id = Convert.ToInt32(dr["ID_Lop"].ToString())
-                });
-            }
-            li.Add(new LopSH
-            {
-                id = 0,
-                name = "All"
-            });
-            cbbbLsh.Items.AddRange(li.ToArray());
+            
+            cbbbLsh.Items.AddRange(ql.getCBB().ToArray());
         }
         private void dataform2()
         {
             mssv.Text = _sv.MSSV;
             mssv.Enabled = false;
             name.Text = _sv.FullName;
-            cbbbLsh.SelectedItem=DbAdapter.Instance.GetLopSHByID(_sv.ID_LopSH);
-            cbbbLsh.Text= DbAdapter.Instance.GetLopSHByID(_sv.ID_LopSH).name;
+            cbbbLsh.SelectedItem=  ql.getCbbItemByIdLsh(_sv.ID_LopSH);
+            cbbbLsh.Text= ql.getCbbItemByIdLsh(_sv.ID_LopSH).name;
             NS.Text = _sv.NS.ToString();
             dtb.Text = _sv.DTB.ToString();
             if (_sv.Gender)
@@ -80,17 +68,8 @@ namespace QLSV
                     _svnew.Gender = true;
                 }
                 _svnew.DTB = double.Parse(dtb.Text);
-                _svnew.ID_LopSH = ((LopSH)cbbbLsh.SelectedItem).id;
-                try
-                {
-                    string query = "INSERT INTO SV (MSSV, NameSV, DTB, Gender, ID_Lop, NS) " +
-                    "VALUES (@MSSV, @NameSV, @DTB, @Gender, @ID_Lop, @NS)";
-                    DbAdapter.Instance.saveSV(query, _svnew);
-                }catch(Exception ex) {
-                    MessageBox.Show("Error: " + ex.Message);
-                    return;
-                }
-                
+                _svnew.ID_LopSH = ((CbbItem)cbbbLsh.SelectedItem).value;
+                ql.AddUpdate(_svnew);
             }
             else
             {
@@ -105,9 +84,8 @@ namespace QLSV
                     _sv.Gender = true;
                 }
                 _sv.DTB = double.Parse(dtb.Text);
-                _sv.ID_LopSH = ((LopSH)cbbbLsh.SelectedItem).id;
-                string query = "UPDATE SV SET NameSV = @NameSV, DTB = @DTB, Gender = @Gender, ID_Lop = @ID_Lop, NS = @NS WHERE MSSV = @MSSV";
-                DbAdapter.Instance.saveSV(query, _sv);
+                _sv.ID_LopSH = ((CbbItem)cbbbLsh.SelectedItem).value;
+                ql.AddUpdate(_sv);
             }
             this.Close();
 
